@@ -45,7 +45,7 @@ const Navbar = () => {
   const [navOpened, setNavOpened] = useState<boolean>(false);
 
   return (
-    <header className="w-full relative bg-white px-8 h-[140px] shadow-sm flex items-center justify-between">
+    <header className="w-full relative bg-white px-8 py-4 shadow-sm flex items-center justify-between">
       <div className="flex flex-[0.5]">
         <div className="flex items-center mr-5 py-2">
           <HiMailOpen size={24} className="text-primary pb-1" />

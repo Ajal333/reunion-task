@@ -17,13 +17,14 @@ const Home = () => {
 
   const onSearch = () => {
     const [start, end] = getPriceRange(priceRange);
+
     const newListings = Listings.filter(
       (listing) =>
         listing?.city?.toLowerCase().includes(location) &&
         listing?.type?.toLowerCase().includes(propType) &&
-        new Date(listing?.date) >= new Date(date) &&
         listing?.price >= start &&
-        listing?.price <= end
+        listing?.price <= end &&
+        (date?.length ? new Date(date) >= new Date(listing?.date) : true)
     );
     setListings(newListings);
   };
